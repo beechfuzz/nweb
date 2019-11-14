@@ -35,7 +35,7 @@ Just need a basic C compiler.  `gcc -O2 nweb.c -o nweb --static` should suffice.
     Usage: nweb [OPTION...]
     
     Options:
-        -d          Run as a daemon.
+        -d          Run in the background as a daemon.
         -l LOGFILE  Specify log location. If option is not used, then log will be at '/var/log/nweb/nweb.log'.
         -p PORT     Specify port.  If option is not used, then nweb will serve on port 80.
         -r ROOTDIR  Specify directory where index.html is located. If option is not used, then nweb will use the current working directory.
