@@ -76,7 +76,7 @@ struct extensionInfo extensions [] = {
 void usage(){
     printf("Usage: nweb [OPTION...]\n\n"
             "Options:\n"
-            "    -d          Run as a daemon.\n"
+            "    -d          Run in the background as a daemon.\n"
             "    -l LOGFILE  Specify log location. If option is not used, then log will be at '/var/log/nweb/nweb.log'.\n"
             "    -p PORT     Specify port.  If option is not used, then nweb will serve on port 80.\n"
             "    -r ROOTDIR  Specify directory where index.html is located. If option is not used, then nweb will use the current working directory.\n"
