@@ -17,32 +17,45 @@ An updated version of [ankushagarwal/nweb](https://github.com/ankushagarwal/nweb
 
 &nbsp;
 
-# Features/Changes I've made:
+# Features I've added/changed:
 
 Action|Description
 -|-
 Change|Made the source easier to read
-Add|`getopt` argument parser
+Add|`getopt_long` argument parser
 Add|Can specify location of log file
 Add|Can daemonize process
+
+&nbsp;            
 
 # Compiling
 
 Just need a basic C compiler.  `gcc -O2 nweb.c -o nweb --static` should suffice.
+
+&nbsp;            
 
 # Usage
 
     Usage: nweb [OPTION...]
     
     Options:
-        -d          Run in the background as a daemon.
-        -l LOGFILE  Specify log location. If option is not used, then log will be at '/var/log/nweb/nweb.log'.
-        -p PORT     Specify port.  If option is not used, then nweb will serve on port 80.
-        -r ROOTDIR  Specify directory where index.html is located. If option is not used, then nweb will use the current working directory.
-        -h          Display the full help.
+        -d, --daemonize        Run in the background as a daemon.
+        -l, --logfile LOGFILE  Specify log location. If option is not used, then log will be at '/var/log/nweb/nweb.log'.
+        -p, --port PORT        Specify port.  If option is not used, then nweb will serve on port 80.
+        -r, --rootdir ROOTDIR  Specify directory where index.html is located. If option is not used, then nweb will use the current working directory.
+        -h, --help             Display the full help.
+        -v, --version          Display the version.
     
     Arguments:
         LOGFILE   Full path to log file. (Ex: '/var/log/nweb/nweb.log')
         PORT      Port number that nweb will serve files on. (Ex: '80')
         ROOTDIR   Full path to the directory where index.thml is located. (Ex: '$PWD')
 
+
+Default values:
+
+Argument|Value
+-|-
+`PORT`|80
+`LOGFILE`|`/var/log/nweb/nweb.log`
+`ROOTDIR`|Current working directory
