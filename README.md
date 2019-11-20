@@ -52,7 +52,7 @@ Just need a basic C compiler.  `gcc -O2 nweb.c -o nweb --static` should suffice.
         ROOTDIR   Full path to the directory where index.thml is located. (Ex: '$PWD')
 
 
-Default values:
+### Default values:
 
 Argument|Value
 -|-
